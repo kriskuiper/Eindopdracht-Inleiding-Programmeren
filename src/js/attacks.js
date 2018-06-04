@@ -89,29 +89,30 @@ function kiesAanval() {
     let keuze = Math.random()*9;
     if (keuze < 2) {
         aanvallenFons[0].valAan();
-        hpSpelerGetal.textContent = hpSpeler; //zet de geüpdatete hp in de HTML
+        hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[0].name + '.'; // zet de gebruikte aanval in de HTML
         return 'Fons gebruikt ' + aanvallenFons[0].name + '.';
     }
     else if (keuze > 2 && keuze < 4) {
         aanvallenFons[1].valAan();
-        hpSpelerGetal.textContent = hpSpeler; //zet de geüpdatete hp in de HTML
+        hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[1].name + '.'; // zet de gebruikte aanval in de HTML
         return 'Fons gebruikt ' + aanvallenFons[1].name + '.';
     }
     else if (keuze > 4 && keuze < 6) {
         aanvallenFons[2].valAan();
-        hpSpelerGetal.textContent = hpSpeler; //zet de geüpdatete hp in de HTML
+        hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[2].name + '.'; // zet de gebruikte aanval in de HTML
         return 'Fons gebruikt ' + aanvallenFons[2].name + '.';
     }
     else if (keuze > 6 && keuze < 7) {
         aanvallenFons[3].valAan();
-        hpSpelerGetal.textContent = hpSpeler; //zet de geüpdatete hp in de HTML
+        hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[3].name + '.'; // zet de gebruikte aanval in de HTML
         return 'Fons gebruikt ' + aanvallenFons[3].name + '.';
     }
     else {
+        fonsAttack.textContent = 'Fons doet even niets';
         return 'Fons doet even niets.'
     }
 }
@@ -121,7 +122,7 @@ function kiesAanval() {
 function doeVraag() {
     aanvallenStudent[0].valAan();
     hpFonsGetal.textContent = hpFons;
-    setTimeout(kiesAanval, 600);
+    setTimeout(kiesAanval, 700);
     fonsDenktNa = false;
 }
 
@@ -131,7 +132,7 @@ document.getElementById('doeVraag').addEventListener('click', doeVraag);
 function doePraten() {
     aanvallenStudent[1].valAan();
     hpFonsGetal.textContent = hpFons;
-    setTimeout(kiesAanval, 600);
+    setTimeout(kiesAanval, 700);
     fonsDenktNa = false;
 }
 
@@ -141,7 +142,7 @@ document.getElementById('doePraten').addEventListener('click', doePraten);
 function doeAbsentie() {
     aanvallenStudent[2].valAan();
     hpFonsGetal.textContent = hpFons;
-    setTimeout(kiesAanval, 600);
+    setTimeout(kiesAanval, 700);
     fonsDenktNa = false;
 }
 
@@ -151,7 +152,7 @@ document.getElementById('doeAbsentie').addEventListener('click', doeAbsentie);
 function doeFest() {
     aanvallenStudent[3].valAan();
     hpFonsGetal.textContent = hpFons;
-    setTimeout(kiesAanval, 600);
+    setTimeout(kiesAanval, 700);
     fonsDenktNa = false;
 }
 
