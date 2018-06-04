@@ -7,36 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>CMD Pokémon battle</h1>
-    </header>
-    <main>
-        <section class="player-info">
-            <h2 id="naamStudent">Naam student</h2>
-            <div class="foto-wrapper">
-                <img src="" alt="">
-            </div>
-            <p id="hpSpeler">460</p>
-        </section>
-        <section class="player-info">
-            <h2 id="naamFons">Fons</h2>
-            <div class="foto-wrapper">
-                <img src="" alt="">
-            </div>
-            <p id="hpFons">640</p>
-        </section>
-        <section class="attack-usage">
-            <div id="player-attacks">
-                <button id="doeVraag">vraag</button>
-                <button id="doePraten">erdoorheen praten</button>
-                <button id="doeAbsentie">absentie</button>
-                <button id="doeFest">fest</button>
-            </div>
-            <div id="fons-attacks">
-                <p id="fonsAttack">...</p>
-            </div>
-        </section>
-    </main>
+    <div class="wrapper">
+        <header>
+            <h1>CMD Pokémon battle</h1>
+        </header>
+        <main>
+            <section class="player-info">
+                <section>
+                    <h2 id="naamStudent">Student</h2>
+                    <div class="foto-wrapper">
+                        <img src="images/cmd-student.png" alt="">
+                    </div>
+                    <p class="hp" id="hpSpeler">460</p>
+                </section>
+                <section>
+                    <h2 id="naamFons">Fons</h2>
+                    <div class="foto-wrapper">
+                        <img src="images/hoofd-fons.jpg" alt="Hoofd van Fons">
+                    </div>
+                    <p class="hp" id="hpFons">640</p>
+                </section>
+            </section>
+            <section class="attack-usage">
+                <div class=player-attacks id="playerAttacks">
+                    <button id="doeVraag">vraag</button>
+                    <button id="doePraten">erdoorheen praten</button>
+                    <button id="doeAbsentie">absentie</button>
+                    <button id="doeFest">fest</button>
+                </div>
+                <div id="fons-attacks">
+                    <p id="fonsAttack">...</p>
+                </div>
+            </section>
+        </main>
+    </div>
     <footer>
         <p>Kris Kuiper | 500775875 | Klas: Zee | Inleiding Programmeren | Docent: F. van Kesteren | 13 - 06 - 2018</p>
     </footer>

@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin: 40px 0;
+}
+
+h1, h2, h3, p {
+  font-family: Courier New, Courier, monospace;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+button {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 4px;
+  width: 140px;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.7em;
+  position: fixed;
+  bottom: 20px;
+  max-width: 900px;
+  margin-left: 20%;
+}
+
+.player-info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.attack-usage {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.foto-wrapper {
+  max-width: 70%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.foto-wrapper img {
+  height: 100%;
+}
+
+.player-attacks {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  column-gap: 5px;
+}
+
+.player-attacks button {
+  margin: 4px 0;
+}
+
+.hp {
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
