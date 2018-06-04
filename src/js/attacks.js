@@ -43,12 +43,6 @@ const aanvallenStudent = [
     }
 ];
 
-/* ====== koppel de aanvallen van de Student aan knoppen in de HTML
-zodat de student een keuze kan maken welke aanval hij of zij wilt
-uitvoeren */
-
-
-
 // ====== aanvallen Fons
 const aanvallenFons = [
     // aanval 1
@@ -96,24 +90,69 @@ function kiesAanval() {
     if (keuze < 2) {
         aanvallenFons[0].valAan();
         hpSpelerGetal.textContent = hpSpeler; //zet de geüpdatete hp in de HTML
+        fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[0].name + '.'; // zet de gebruikte aanval in de HTML
         return 'Fons gebruikt ' + aanvallenFons[0].name + '.';
     }
     else if (keuze > 2 && keuze < 4) {
         aanvallenFons[1].valAan();
         hpSpelerGetal.textContent = hpSpeler; //zet de geüpdatete hp in de HTML
+        fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[1].name + '.'; // zet de gebruikte aanval in de HTML
         return 'Fons gebruikt ' + aanvallenFons[1].name + '.';
     }
     else if (keuze > 4 && keuze < 6) {
         aanvallenFons[2].valAan();
         hpSpelerGetal.textContent = hpSpeler; //zet de geüpdatete hp in de HTML
+        fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[2].name + '.'; // zet de gebruikte aanval in de HTML
         return 'Fons gebruikt ' + aanvallenFons[2].name + '.';
     }
     else if (keuze > 6 && keuze < 7) {
         aanvallenFons[3].valAan();
         hpSpelerGetal.textContent = hpSpeler; //zet de geüpdatete hp in de HTML
+        fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[3].name + '.'; // zet de gebruikte aanval in de HTML
         return 'Fons gebruikt ' + aanvallenFons[3].name + '.';
     }
     else {
         return 'Fons doet even niets.'
     }
 }
+
+// ====== student doet aanvallen
+// student gebruikt aanval 1
+function doeVraag() {
+    aanvallenStudent[0].valAan();
+    hpFonsGetal.textContent = hpFons;
+    setTimeout(kiesAanval, 600);
+    fonsDenktNa = false;
+}
+
+document.getElementById('doeVraag').addEventListener('click', doeVraag);
+
+// student gebruikt aanval 2
+function doePraten() {
+    aanvallenStudent[1].valAan();
+    hpFonsGetal.textContent = hpFons;
+    setTimeout(kiesAanval, 600);
+    fonsDenktNa = false;
+}
+
+document.getElementById('doePraten').addEventListener('click', doePraten);
+
+// student gebruikt aanval 3
+function doeAbsentie() {
+    aanvallenStudent[2].valAan();
+    hpFonsGetal.textContent = hpFons;
+    setTimeout(kiesAanval, 600);
+    fonsDenktNa = false;
+}
+
+document.getElementById('doeAbsentie').addEventListener('click', doeAbsentie);
+
+// student gebruikt aanval 4
+function doeFest() {
+    aanvallenStudent[3].valAan();
+    hpFonsGetal.textContent = hpFons;
+    setTimeout(kiesAanval, 600);
+    fonsDenktNa = false;
+}
+
+document.getElementById('doeFest').addEventListener('click', doeFest);

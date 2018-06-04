@@ -12,12 +12,8 @@ var student = {
 
 const naamSpeler = student.name;
 var hpSpeler = student.hp;
-console.log(hpSpeler);
 
-// zet de naam en de hp van de student in de HTML
-// document.getElementById('hpStudent').textContent = hpSpeler;
-// document.getElementById('naamStudent').textContent = naamSpeler;
-
+naamSpelerTekst.textContent = naamSpeler;
 
 // ====== Fons
 var fons = {
@@ -27,8 +23,7 @@ var fons = {
 
 const naamFons = fons.name;
 var hpFons = fons.hp;
-console.log(hpFons);
 
-// zet de naam en de hp van Fons in de HTML
-// document.getElementById('hpFons').textContent = hpFons;
-// document.getElementById('naamStudent').textContent = naamFons;
+naamFonsTekst.textContent = naamFons;
+
+let fonsDenktNa = true; // vlag voor niet mogen gebruiken van aanvallen student
