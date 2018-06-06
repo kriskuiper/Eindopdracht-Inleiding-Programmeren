@@ -47,7 +47,7 @@ const aanvallenStudent = [
 const aanvallenFons = [
     // aanval 1
     {
-        name: 'Correctie',
+        name: 'Strafwerk',
         sterkte: 30,
         valAan: function() {
             hpSpeler = hpSpeler - this.sterkte;
@@ -56,7 +56,7 @@ const aanvallenFons = [
     },
     // aanval 2
     {
-        name: 'Uitleg',
+        name: 'Extra huiswerk',
         sterkte: 40,
         valAan: function() {
             hpSpeler = hpSpeler - this.sterkte;
@@ -65,7 +65,7 @@ const aanvallenFons = [
     },
     // aanval 3
     {
-        name: 'Huiswerk',
+        name: 'Aangifte van fraude',
         sterkte: 50,
         valAan: function() {
             hpSpeler = hpSpeler - this.sterkte;
@@ -74,7 +74,7 @@ const aanvallenFons = [
     },
     // aanval 4
     {
-        name: 'Onverwachte toets',
+        name: 'De klas uitsturen',
         sterkte: 100,
         valAan: function() {
             hpSpeler = hpSpeler - this.sterkte;
@@ -91,28 +91,33 @@ function kiesAanval() {
         aanvallenFons[0].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[0].name + '.'; // zet de gebruikte aanval in de HTML
+        fonsDenktNa = false;
         return 'Fons gebruikt ' + aanvallenFons[0].name + '.';
     }
     else if (keuze > 2 && keuze < 4) {
         aanvallenFons[1].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[1].name + '.'; // zet de gebruikte aanval in de HTML
+        fonsDenktNa = false;
         return 'Fons gebruikt ' + aanvallenFons[1].name + '.';
     }
     else if (keuze > 4 && keuze < 6) {
         aanvallenFons[2].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[2].name + '.'; // zet de gebruikte aanval in de HTML
+        fonsDenktNa = false;
         return 'Fons gebruikt ' + aanvallenFons[2].name + '.';
     }
     else if (keuze > 6 && keuze < 7) {
         aanvallenFons[3].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[3].name + '.'; // zet de gebruikte aanval in de HTML
+        fonsDenktNa = false;
         return 'Fons gebruikt ' + aanvallenFons[3].name + '.';
     }
     else {
         fonsAttack.textContent = 'Fons doet even niets';
+        fonsDenktNa = false;
         return 'Fons doet even niets.'
     }
 }
@@ -123,37 +128,56 @@ function doeVraag() {
     aanvallenStudent[0].valAan();
     hpFonsGetal.textContent = hpFons;
     setTimeout(kiesAanval, 700);
-    fonsDenktNa = false;
+    fonsDenktNa = true;
 }
 
-document.getElementById('doeVraag').addEventListener('click', doeVraag);
+vraag.addEventListener('click', doeVraag);
 
 // student gebruikt aanval 2
 function doePraten() {
     aanvallenStudent[1].valAan();
     hpFonsGetal.textContent = hpFons;
     setTimeout(kiesAanval, 700);
-    fonsDenktNa = false;
+    fonsDenktNa = true;
 }
 
-document.getElementById('doePraten').addEventListener('click', doePraten);
+praten.addEventListener('click', doePraten);
 
 // student gebruikt aanval 3
 function doeAbsentie() {
     aanvallenStudent[2].valAan();
     hpFonsGetal.textContent = hpFons;
     setTimeout(kiesAanval, 700);
-    fonsDenktNa = false;
+    fonsDenktNa = true;
 }
 
-document.getElementById('doeAbsentie').addEventListener('click', doeAbsentie);
+absentie.addEventListener('click', doeAbsentie);
 
 // student gebruikt aanval 4
 function doeFest() {
     aanvallenStudent[3].valAan();
     hpFonsGetal.textContent = hpFons;
     setTimeout(kiesAanval, 700);
-    fonsDenktNa = false;
+    fonsDenktNa = true;
 }
 
-document.getElementById('doeFest').addEventListener('click', doeFest);
+fest.addEventListener('click', doeFest);
+
+// als de gebruiker een aanval wil gebruiken terwijl fons nadenkt, zorg er dan voor dat dat niet kan
+function verwijderEvents() {
+    if (fonsDenktNa === true) {
+        vraag.removeEventListener('click', doeVraag);
+        praten.removeEventListener('click', doePraten);
+        absentie.removeEventListener('click', doeAbsentie);
+        fest.removeEventListener('click', doeFest);
+
+    }
+    else {
+        vraag.addEventListener('click', doeVraag);
+        praten.addEventListener('click', doePraten);
+        absentie.addEventListener('click', doeAbsentie);
+        fest.addEventListener('click', doeFest);
+    }
+}
+
+playerAttacks.addEventListener('click', verwijderEvents, true);

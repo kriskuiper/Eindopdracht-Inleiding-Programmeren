@@ -15,19 +15,20 @@
             <section class="player-info">
                 <section>
                     <h2 id="naamStudent"></h2>
-                    <div class="foto-wrapper">
+                    <figure class="foto-wrapper">
                         <img src="images/cmd-student.png" alt="">
-                    </div>
+                    </figure>
                     <p class="hp" id="hpSpeler">HP 460</p>
                 </section>
                 <section>
                     <h2 id="naamFons"></h2>
-                    <div class="foto-wrapper">
+                    <figure class="foto-wrapper">
                         <img src="images/hoofd-fons.jpg" alt="Hoofd van Fons">
-                    </div>
+                    </figure>
                     <p class="hp" id="hpFons">HP 640</p>
                 </section>
             </section>
+            <p>Kies je aanval en val Fons aan!</p>
             <section class="attack-usage">
                 <div class=player-attacks id="playerAttacks">
                     <button id="doeVraag">vraag</button>
@@ -36,8 +37,12 @@
                     <button id="doeFest">fest</button>
                 </div>
                 <div id="fons-attacks">
-                    <p id="fonsAttack">...</p>
+                    <p id="namenAanvallenFons"></p>
+                    <p id="fonsAttack">Pas op, hij valt jou ook aan...</p>
                 </div>
+            </section>
+            <section id="naamAanvallenFons">
+                
             </section>
         </main>
     </div>
@@ -49,6 +54,7 @@
 <script src="js/elements.js"></script>
 <script src="js/players.js"></script>
 <script src="js/attacks.js"></script>
+<script src="js/sound.js"></script>
 <!-- end scripts -->
 </body>
 </html>

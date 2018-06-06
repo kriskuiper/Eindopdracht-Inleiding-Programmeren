@@ -5,7 +5,7 @@
 // ====== start of script players =======
 
 // ====== Student
-var student = {
+let student = {
     name: 'Student',
     hp: 460
 }
@@ -16,7 +16,7 @@ var hpSpeler = student.hp;
 naamSpelerTekst.textContent = naamSpeler;
 
 // ====== Fons
-var fons = {
+let fons = {
     name: 'Fons',
     hp: 640
 }
@@ -26,4 +26,6 @@ var hpFons = fons.hp;
 
 naamFonsTekst.textContent = naamFons;
 
-let fonsDenktNa = true; // vlag voor niet mogen gebruiken van aanvallen student
+let fonsDenktNa = false; // vlag voor niet mogen gebruiken van aanvallen student
+
+// ====== interactieve dingen
