@@ -92,6 +92,7 @@ function kiesAanval() {
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[0].name + '.'; // zet de gebruikte aanval in de HTML
         fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
+        checkHpSpeler();
         return 'Fons gebruikt ' + aanvallenFons[0].name + '.';
     }
     else if (keuze > 2 && keuze < 4) {
@@ -99,6 +100,7 @@ function kiesAanval() {
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[1].name + '.'; // zet de gebruikte aanval in de HTML
         fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
+        checkHpSpeler();
         return 'Fons gebruikt ' + aanvallenFons[1].name + '.';
     }
     else if (keuze > 4 && keuze < 6) {
@@ -106,6 +108,7 @@ function kiesAanval() {
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[2].name + '.'; // zet de gebruikte aanval in de HTML
         fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
+        checkHpSpeler();
         return 'Fons gebruikt ' + aanvallenFons[2].name + '.';
     }
     else if (keuze > 6 && keuze < 7) {
@@ -113,6 +116,7 @@ function kiesAanval() {
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[3].name + '.'; // zet de gebruikte aanval in de HTML
         fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
+        checkHpSpeler();
         return 'Fons gebruikt ' + aanvallenFons[3].name + '.';
     }
     else {
@@ -127,6 +131,7 @@ function kiesAanval() {
 function doeVraag() {
     aanvallenStudent[0].valAan();
     hpFonsGetal.textContent = hpFons;
+    checkHpFons();
     setTimeout(kiesAanval, 700);
     fonsDenktNa = true;
 }
@@ -137,6 +142,7 @@ vraag.addEventListener('click', doeVraag);
 function doePraten() {
     aanvallenStudent[1].valAan();
     hpFonsGetal.textContent = hpFons;
+    checkHpFons();
     setTimeout(kiesAanval, 700);
     fonsDenktNa = true;
 }
@@ -147,6 +153,7 @@ praten.addEventListener('click', doePraten);
 function doeAbsentie() {
     aanvallenStudent[2].valAan();
     hpFonsGetal.textContent = hpFons;
+    checkHpFons();
     setTimeout(kiesAanval, 700);
     fonsDenktNa = true;
 }
@@ -157,6 +164,7 @@ absentie.addEventListener('click', doeAbsentie);
 function doeFest() {
     aanvallenStudent[3].valAan();
     hpFonsGetal.textContent = hpFons;
+    checkHpFons();
     setTimeout(kiesAanval, 700);
     fonsDenktNa = true;
 }

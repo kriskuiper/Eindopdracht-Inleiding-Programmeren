@@ -19,9 +19,6 @@ function checkHpSpeler() {
     }
 }
 
-checkHpSpeler();
-setInterval(checkHpSpeler, 100);
-
 naamSpelerTekst.textContent = naamSpeler;
 
 // ====== Fons
@@ -38,9 +35,6 @@ function checkHpFons() {
         console.log('je hebt gewonnen!');
     }
 }
-
-checkHpFons();
-setInterval(checkHpFons, 100);
 
 naamFonsTekst.textContent = naamFons;
 
