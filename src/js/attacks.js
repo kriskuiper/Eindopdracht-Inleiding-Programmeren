@@ -66,7 +66,7 @@ const aanvallenFons = [
     // aanval 3
     {
         name: 'Aangifte van fraude',
-        sterkte: 50,
+        sterkte: 150,
         valAan: function() {
             hpSpeler = hpSpeler - this.sterkte;
             return hpSpeler;
@@ -75,7 +75,7 @@ const aanvallenFons = [
     // aanval 4
     {
         name: 'De klas uitsturen',
-        sterkte: 100,
+        sterkte: 50,
         valAan: function() {
             hpSpeler = hpSpeler - this.sterkte;
             return hpSpeler;
@@ -91,33 +91,33 @@ function kiesAanval() {
         aanvallenFons[0].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[0].name + '.'; // zet de gebruikte aanval in de HTML
-        fonsDenktNa = false;
+        fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         return 'Fons gebruikt ' + aanvallenFons[0].name + '.';
     }
     else if (keuze > 2 && keuze < 4) {
         aanvallenFons[1].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[1].name + '.'; // zet de gebruikte aanval in de HTML
-        fonsDenktNa = false;
+        fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         return 'Fons gebruikt ' + aanvallenFons[1].name + '.';
     }
     else if (keuze > 4 && keuze < 6) {
         aanvallenFons[2].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[2].name + '.'; // zet de gebruikte aanval in de HTML
-        fonsDenktNa = false;
+        fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         return 'Fons gebruikt ' + aanvallenFons[2].name + '.';
     }
     else if (keuze > 6 && keuze < 7) {
         aanvallenFons[3].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[3].name + '.'; // zet de gebruikte aanval in de HTML
-        fonsDenktNa = false;
+        fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         return 'Fons gebruikt ' + aanvallenFons[3].name + '.';
     }
     else {
         fonsAttack.textContent = 'Fons doet even niets';
-        fonsDenktNa = false;
+        fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         return 'Fons doet even niets.'
     }
 }
