@@ -4,6 +4,11 @@
 
 // ====== start of script players =======
 
+// ====== Herlaad pagina functie
+function herlaadPagina() {
+    window.location.reload();
+}
+
 // ====== Student
 let student = {
     name: 'Student',
@@ -15,7 +20,17 @@ var hpSpeler = student.hp;
 
 function checkHpSpeler() {
     if (hpSpeler < 0 || hpSpeler == 0) {
-        console.log('je hebt verloren...');
+        // verander de hp standaard in 0
+        hpSpelerGetal.textContent = 'HP 0';
+        // speel defeatSound af en mute battlesound
+        battleSound.muted = true;
+        speelDefeatSound();
+        //verander de tekst van de 'Kies je aanval' in 'Helaas, je hebt verloren van Fons...'
+        playerMotivation.textContent = 'Helaas, je hebt verloren van Fons...';
+        // verplaats de aanvallen met een 'opnieuw beginnen' button
+        playerAttacks.innerHTML = '<button id="opnieuwBeginnen">Opnieuw beginnen</button>';
+        // zorg ervoor dat de pagina herlaadt wanneer de gebruiker op de button opnieuwBeginnen drukt
+        document.getElementById('opnieuwBeginnen').addEventListener('click', herlaadPagina);
     }
 }
 
@@ -32,7 +47,22 @@ var hpFons = fons.hp;
 
 function checkHpFons() {
     if (hpFons < 0 || hpFons == 0) {
-        console.log('je hebt gewonnen!');
+        // verander de hp standaard in 0
+        hpFonsGetal.textContent = 'HP 0';
+        //speel victorySound af
+        battleSound.muted = true;
+        speelVictorySound();
+        //verander de tekst van de 'Fons gebruikt ... in 'je hebt de almachtige fons verslagen!'
+        fonsAttack.textContent = 'Yes! Goed gedaan, je hebt de almachtige Fons verslagen.';
+        //verander de tekst van de 'Kies je aanval' in 'Wil je opnieuw vechten?'
+        playerMotivation.textContent = 'Wil je opnieuw vechten?'
+        // verplaats de aanvallen met een 'opnieuw beginnen' button
+        playerAttacks.innerHTML = '<button id="opnieuwBeginnen">Opnieuw beginnen</button>';
+        // zorg ervoor dat de pagina herlaadt wanneer de gebruiker op de button opnieuwBeginnen drukt
+        document.getElementById('opnieuwBeginnen').addEventListener('click', herlaadPagina);
+    }
+    else {
+        setTimeout(kiesAanval, 700);
     }
 }
 

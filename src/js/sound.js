@@ -1,9 +1,27 @@
-const sound = new Audio('sounds/wildpokemon.mp3');
-sound.loop = true;
-sound.muted = true; //deze weg halen tijdens eindopdracht
+const battleSound = new Audio('sounds/battle.mp3');
+battleSound.loop = true;
 
-function speelMuziekjeAf() {
-    sound.play();
+function speelBattleSound() {
+    battleSound.play();
 }
 
-window.addEventListener('load', speelMuziekjeAf);
+window.addEventListener('load', speelBattleSound);
+
+const victorySound = new Audio('sounds/victory.mp3');
+victorySound.loop = true;
+
+function speelVictorySound() {
+    victorySound.play();
+}
+
+const defeatSound = new Audio('sounds/defeat.mp3');
+defeatSound.loop = true;
+
+function speelDefeatSound() {
+    defeatSound.play();
+}
+
+
+
+
+
