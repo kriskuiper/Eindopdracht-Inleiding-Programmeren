@@ -91,6 +91,7 @@ function kiesAanval() {
         aanvallenFons[0].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[0].name + '.'; // zet de gebruikte aanval in de HTML
+        sterkteAanvalFons.textContent = '-' + aanvallenFons[0].sterkte;
         fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         checkHpSpeler();
         return 'Fons gebruikt ' + aanvallenFons[0].name + '.';
@@ -99,6 +100,7 @@ function kiesAanval() {
         aanvallenFons[1].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[1].name + '.'; // zet de gebruikte aanval in de HTML
+        sterkteAanvalFons.textContent = '-' + aanvallenFons[1].sterkte;
         fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         checkHpSpeler();
         return 'Fons gebruikt ' + aanvallenFons[1].name + '.';
@@ -107,6 +109,7 @@ function kiesAanval() {
         aanvallenFons[2].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[2].name + '.'; // zet de gebruikte aanval in de HTML
+        sterkteAanvalFons.textContent = '-' + aanvallenFons[2].sterkte;
         fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         checkHpSpeler();
         return 'Fons gebruikt ' + aanvallenFons[2].name + '.';
@@ -115,6 +118,7 @@ function kiesAanval() {
         aanvallenFons[3].valAan();
         hpSpelerGetal.textContent = 'HP ' + hpSpeler; //zet de geüpdatete hp in de HTML
         fonsAttack.textContent = 'Fons gebruikt ' + aanvallenFons[3].name + '.'; // zet de gebruikte aanval in de HTML
+        sterkteAanvalFons.textContent = '-' + aanvallenFons[3].sterkte;
         fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         checkHpSpeler();
         return 'Fons gebruikt ' + aanvallenFons[3].name + '.';
@@ -131,7 +135,9 @@ function kiesAanval() {
 // student gebruikt aanval 1
 function doeVraag() {
     aanvallenStudent[0].valAan();
+    playerMotivation.textContent = 'Jij doet ' + aanvallenStudent[0].name
     hpFonsGetal.textContent = 'HP ' + hpFons;
+    sterkteAanvalSpeler.textContent = '-' + aanvallenStudent[0].sterkte;
     checkHpFons();
     fonsDenktNa = true;
 }
@@ -141,7 +147,9 @@ vraag.addEventListener('click', doeVraag);
 // student gebruikt aanval 2
 function doePraten() {
     aanvallenStudent[1].valAan();
+    playerMotivation.textContent = 'Jij doet ' + aanvallenStudent[1].name
     hpFonsGetal.textContent = 'HP ' + hpFons;
+    sterkteAanvalSpeler.textContent = '-' + aanvallenStudent[1].sterkte;
     checkHpFons();
     fonsDenktNa = true;
 }
@@ -151,7 +159,9 @@ praten.addEventListener('click', doePraten);
 // student gebruikt aanval 3
 function doeAbsentie() {
     aanvallenStudent[2].valAan();
+    playerMotivation.textContent = 'Jij doet ' + aanvallenStudent[2].name
     hpFonsGetal.textContent = 'HP ' + hpFons;
+    sterkteAanvalSpeler.textContent = '-' + aanvallenStudent[2].sterkte;
     checkHpFons();
     fonsDenktNa = true;
 }
@@ -161,7 +171,9 @@ absentie.addEventListener('click', doeAbsentie);
 // student gebruikt aanval 4
 function doeFest() {
     aanvallenStudent[3].valAan();
+    playerMotivation.textContent = 'Jij doet ' + aanvallenStudent[3].name
     hpFonsGetal.textContent = 'HP ' + hpFons;
+    sterkteAanvalSpeler.textContent = '-' + aanvallenStudent[3].sterkte;
     checkHpFons();
     fonsDenktNa = true;
 }
