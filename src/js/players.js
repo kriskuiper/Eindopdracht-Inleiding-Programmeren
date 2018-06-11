@@ -9,6 +9,12 @@ function herlaadPagina() {
     window.location.reload();
 }
 
+// ====== Verwissel de knoppen met een 'Opnieuw beginnen' button
+function switchElements() {
+    playerAttacks.classList.toggle('is-none');
+    opnieuwBeginnen.classList.toggle('is-none');
+}
+
 // ====== Student
 let student = {
     name: 'Student',
@@ -28,7 +34,7 @@ function checkHpSpeler() {
         //verander de tekst van de 'Kies je aanval' in 'Helaas, je hebt verloren van Fons...'
         playerMotivation.textContent = 'Helaas, je hebt verloren van Fons...';
         // verplaats de aanvallen met een 'opnieuw beginnen' button
-        playerAttacks.innerHTML = '<button id="opnieuwBeginnen">Opnieuw beginnen</button>';
+        switchElements();
         // zorg ervoor dat de pagina herlaadt wanneer de gebruiker op de button opnieuwBeginnen drukt
         document.getElementById('opnieuwBeginnen').addEventListener('click', herlaadPagina);
     }
@@ -57,7 +63,7 @@ function checkHpFons() {
         //verander de tekst van de 'Kies je aanval' in 'Wil je opnieuw vechten?'
         playerMotivation.textContent = 'Wil je opnieuw vechten?'
         // verplaats de aanvallen met een 'opnieuw beginnen' button
-        playerAttacks.innerHTML = '<button id="opnieuwBeginnen">Opnieuw beginnen</button>';
+        switchElements();
         // zorg ervoor dat de pagina herlaadt wanneer de gebruiker op de button opnieuwBeginnen drukt
         document.getElementById('opnieuwBeginnen').addEventListener('click', herlaadPagina);
     }

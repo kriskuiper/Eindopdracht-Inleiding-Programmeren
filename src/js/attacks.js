@@ -125,6 +125,7 @@ function kiesAanval() {
     }
     else {
         fonsAttack.textContent = 'Fons doet even niets';
+        sterkteAanvalFons.textContent = '';
         fonsDenktNa = false; // Fons denkt niet meer na, speler kan aanvallen
         return 'Fons doet even niets.'
     }
