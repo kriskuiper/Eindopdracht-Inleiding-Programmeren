@@ -45,7 +45,7 @@ naamSpelerTekst.textContent = naamSpeler;
 // ====== Fons
 let fons = {
     name: 'Fons',
-    hp: 640
+    hp: 540
 }
 
 const naamFons = fons.name;

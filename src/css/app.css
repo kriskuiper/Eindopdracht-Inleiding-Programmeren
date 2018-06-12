@@ -72,6 +72,11 @@ footer {
   grid-template-columns: 50% 50%;
 }
 
+#metadata p {
+  display: inline;
+  margin-right: 10px;
+}
+
 .foto-wrapper {
   max-width: 70%;
   height: 400px;
