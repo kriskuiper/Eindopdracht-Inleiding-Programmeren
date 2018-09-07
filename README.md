@@ -4,7 +4,7 @@ This game is the final assignment of Inleiding programmeren, which focusses on l
 
 When the student chooses to use an attack the opponent, in this case the teacher, immediately attacks back choosing a random attack.
 
-#Built with
+# Built with
 - HTML
 - CSS (Sass)
 - JavaScript
